@@ -1,12 +1,12 @@
 package Main.entity.araclar;
 
 public abstract class Araba {
-    private String marka;
-    private String model;
-    private String vites_tipi;
-    private String bagaj_kapasitesi;
-    private String renk;
-    private String yas;
-    private String yakit_tipi;
-    private String gunluk_kiralama_bedeli;
+    protected String marka;
+    protected String model;
+    protected String vites_tipi;
+    protected String bagaj_kapasitesi;
+    protected String renk;
+    protected String yas;
+    protected String yakit_tipi;
+    protected int gunluk_kiralama_bedeli;
 }

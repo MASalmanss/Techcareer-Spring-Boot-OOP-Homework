@@ -1,4 +1,4 @@
 package Main.entity.kisiler;
 
-public class Birey {
+public class Birey extends Kiralayici_Sahis{
 }
