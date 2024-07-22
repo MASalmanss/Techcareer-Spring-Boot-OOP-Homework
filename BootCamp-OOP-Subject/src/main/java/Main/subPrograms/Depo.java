@@ -7,6 +7,8 @@ import Main.entity.araclar.Sedan;
 import java.util.ArrayList;
 import java.util.List;
 
+//Static Base
+
 public class Depo {
    static private List<SUV> suvList;
    static private List<Sedan> sedanList;
