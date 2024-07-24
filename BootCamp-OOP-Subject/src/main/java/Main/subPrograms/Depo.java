@@ -1,5 +1,6 @@
 package Main.subPrograms;
 
+import Main.entity.araclar.Araba;
 import Main.entity.araclar.Hatchback;
 import Main.entity.araclar.SUV;
 import Main.entity.araclar.Sedan;
@@ -43,4 +44,39 @@ public class Depo {
     public static void setHatchbackList(List<Hatchback> hatchbackList) {
         Depo.hatchbackList = hatchbackList;
     }
+
+
+    private static void addSedan(Sedan sedan){
+        sedanList.add(sedan);
+    }
+
+
+
+    private static void addSuv(SUV suv){
+        suvList.add(suv);
+    }
+
+
+
+    private static void addHatchback(Hatchback hatchback){
+        hatchbackList.add(hatchback);
+    }
+
+    public static boolean arac_kaydet(Araba araba){
+        if(araba instanceof  SUV){
+            addSuv((SUV) araba);
+            return true;
+        } else if (araba instanceof Sedan) {
+            addSedan((Sedan) araba);
+            return true;
+        } else if (araba instanceof Hatchback) {
+            addHatchback((Hatchback) araba);
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }
+

@@ -1,0 +1,16 @@
+Bilgiler :
+SUV sedan hactback tipi araçlar var.
+Şahıslar ve şirketler var.
+
+Kiralıyabilir - > {
+Bireysel -> Hatcback , sedan
+Şirketler -> hetcback ,  Sedan ,  SUV
+}
+
+Kiralanma -> {
+Günlük ve Aylık -> Sedan , Hatchback
+Günlük -> SUV
+}
+
+Şahıs -> (Ad , Soy Ad , Telefon No ,  T.C. no)
+Şirket -> (Şirket Ad , Telefon no , Vergi No)
