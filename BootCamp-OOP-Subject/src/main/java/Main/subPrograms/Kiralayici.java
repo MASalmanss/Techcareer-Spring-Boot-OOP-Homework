@@ -6,9 +6,8 @@ import Main.entity.araclar.SUV;
 import Main.entity.araclar.Sedan;
 import Main.entity.kisiler.Kiralayici_Sahis;
 import Main.entity.kisiler.Sirket;
-import Main.subPrograms.Depo.*;
 
-import java.util.List;
+
 
 public class Kiralayici {
 
@@ -26,10 +25,17 @@ public class Kiralayici {
     public static boolean kirala(Araba araba , Kiralayici_Sahis kiralayici_sahis , Integer gun_sayisi){
 
         if(kiralabilir_mi(araba , kiralayici_sahis) && aylik_kiralanabilir_mi(araba)){
-
+           int sonuc = gun_sayisi % 30 > 0 ? (gun_sayisi * araba.getGunluk_kiralama_bedeli() * 93) / 100 : gun_sayisi * araba.getGunluk_kiralama_bedeli();
+           araba.setToplamtutar(sonuc);
+           Depo.arac_kaydet(araba);
+           return true;
         }
+
         else {
-            return false;
+            int sonuc = gun_sayisi * araba.getGunluk_kiralama_bedeli();
+            araba.setToplamtutar(sonuc);
+            Depo.arac_kaydet(araba);
+            return true;
         }
     }
 }
